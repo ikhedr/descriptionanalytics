@@ -7,7 +7,7 @@ This code is just samples of how to mine text analytics.
 
 Output from code 
 
-  Date received           Product     Sub-product  \
+  Date received           Product     Sub-product  
 0    03/12/2014          Mortgage  Other mortgage   
 1    10/01/2016  Credit reporting             NaN   
 2    10/17/2016     Consumer Loan    Vehicle loan   
@@ -257,7 +257,7 @@ dtype: int64
 
 ['Credit reporting']
 
-/Users/gwhyte2017/miniconda2/envs/datascience1/lib/python2.7/site-packages/sklearn/model_selection/_split.py:581: Warning: The least populated class in y has only 2 members, which is too few. The minimum number of groups for any class cannot be less than n_splits=5.
+Warning: The least populated class in y has only 2 members, which is too few. The minimum number of groups for any class cannot be less than n_splits=5.
   % (min_groups, self.n_splits)), Warning)
 model_name
 LinearSVC                 0.840460
