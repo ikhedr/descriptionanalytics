@@ -1,9 +1,9 @@
-# callanalytics
+# Text Analytics 
 
 This readme shows the output from the code, this a good description
 of how to mine text data and extract entities and predict.
 
-This code is just samples of how to mine.
+This code is just samples of how to mine text analytics.
 
 Output from code 
 
@@ -14,42 +14,42 @@ Output from code
 3    06/08/2014       Credit card             NaN   
 4    09/13/2014   Debt collection     Credit card   
 
-                                      Issue                   Sub-issue  \
+                                      Issue                   Sub-issue  
 0  Loan modification,collection,foreclosure                         NaN   
 1    Incorrect information on credit report              Account status   
 2                Managing the loan or lease                         NaN   
 3                                Bankruptcy                         NaN   
 4                     Communication tactics  Frequent or repeated calls   
 
-                        Consumer complaint narrative  \
+                        Consumer complaint narrative  
 0                                                NaN   
 1  I have outdated information on my credit repor...   
 2  I purchased a new car on XXXX XXXX. The car de...   
 3                                                NaN   
 4                                                NaN   
 
-                             Company public response  \
+                             Company public response  
 0                                                NaN   
 1  Company has responded to the consumer and the ...   
 2                                                NaN   
 3                                                NaN   
 4                                                NaN   
 
-                                  Company State ZIP code            Tags  \
+                                  Company State ZIP code            Tags  
 0                    M&T BANK CORPORATION    MI    48382             NaN   
 1  TRANSUNION INTERMEDIATE HOLDINGS, INC.    AL    352XX             NaN   
 2          CITIZENS FINANCIAL GROUP, INC.    PA    177XX  Older American   
 3                AMERICAN EXPRESS COMPANY    ID    83854  Older American   
 4                          CITIBANK, N.A.    VA    23233             NaN   
 
-  Consumer consent provided? Submitted via Date sent to company  \
+  Consumer consent provided? Submitted via Date sent to company  
 0                        NaN      Referral           03/17/2014   
 1           Consent provided           Web           10/05/2016   
 2           Consent provided           Web           10/20/2016   
 3                        NaN           Web           06/10/2014   
 4                        NaN           Web           09/13/2014   
 
-  Company response to consumer Timely response? Consumer disputed?  \
+  Company response to consumer Timely response? Consumer disputed?  
 0      Closed with explanation              Yes                 No   
 1      Closed with explanation              Yes                 No   
 2      Closed with explanation              Yes                 No   
@@ -62,6 +62,7 @@ Output from code
 2       2163100  
 3        885638  
 4       1027760  
+
 <class 'pandas.core.frame.DataFrame'>
 Int64Index: 249978 entries, 1 to 973358
 Data columns (total 18 columns):
@@ -86,6 +87,7 @@ Complaint ID                    249978 non-null int64
 dtypes: int64(1), object(17)
 memory usage: 36.2+ MB
 None
+
 Index([u'Product', u'Consumer complaint narrative'], dtype='object')
              Product                       Consumer_complaint_narrative  \
 1   Credit reporting  I have outdated information on my credit repor...   
@@ -100,6 +102,7 @@ Index([u'Product', u'Consumer complaint narrative'], dtype='object')
 7             0  
 12            2  
 16            2  
+
 Product                         249978
 Consumer_complaint_narrative    249978
 category_id                     249978
@@ -108,7 +111,8 @@ Product                         15000
 Consumer_complaint_narrative    15000
 category_id                     15000
 dtype: int64
-             Product                       Consumer_complaint_narrative  \
+
+             Product                       Consumer_complaint_narrative  
 1   Credit reporting  I have outdated information on my credit repor...   
 2      Consumer Loan  I purchased a new car on XXXX XXXX. The car de...   
 7   Credit reporting  An account on my credit report has a mistaken ...   
@@ -122,134 +126,137 @@ dtype: int64
 12            2  
 16            2  
 (15000, 39107)
-# 'Bank account or service':
+#### 'Bank account or service':
   . Most correlated unigrams:
        . deposit
        . overdraft
   . Most correlated bigrams:
        . overdraft fees
        . checking account
-# 'Checking or savings account':
+#### 'Checking or savings account':
   . Most correlated unigrams:
        . enterprise
        . zone
   . Most correlated bigrams:
        . entire day
        . entire financial
-# 'Consumer Loan':
+#### 'Consumer Loan':
   . Most correlated unigrams:
        . vehicle
        . car
   . Most correlated bigrams:
        . auto loan
        . car loan
-# 'Credit card':
+#### 'Credit card':
   . Most correlated unigrams:
        . rewards
        . card
   . Most correlated bigrams:
        . american express
        . credit card
-# 'Credit card or prepaid card':
+#### 'Credit card or prepaid card':
   . Most correlated unigrams:
        . enterprise
        . zone
   . Most correlated bigrams:
        . entire day
        . entire financial
-# 'Credit reporting':
+#### 'Credit reporting':
   . Most correlated unigrams:
        . experian
        . equifax
   . Most correlated bigrams:
        . xxxx equifax
        . credit report
-# 'Credit reporting, credit repair services, or other personal consumer reports':
+#### 'Credit reporting, credit repair services, or other personal consumer reports':
   . Most correlated unigrams:
        . crippled
        . whilst
   . Most correlated bigrams:
        . company collecting
        . requesting removal
-# 'Debt collection':
+#### 'Debt collection':
   . Most correlated unigrams:
        . collection
        . debt
   . Most correlated bigrams:
        . collect debt
        . collection agency
-# 'Money transfer, virtual currency, or money service':
+#### 'Money transfer, virtual currency, or money service':
   . Most correlated unigrams:
        . enterprise
        . zone
   . Most correlated bigrams:
        . entire day
        . entire financial
-# 'Money transfers':
+#### 'Money transfers':
   . Most correlated unigrams:
        . paypal
        . western
   . Most correlated bigrams:
        . money transfer
        . western union
-# 'Mortgage':
+#### 'Mortgage':
   . Most correlated unigrams:
        . modification
        . mortgage
   . Most correlated bigrams:
        . mortgage company
        . loan modification
-# 'Other financial service':
+#### 'Other financial service':
   . Most correlated unigrams:
        . username
        . guard
   . Most correlated bigrams:
        . loan relief
        . check cashing
-# 'Payday loan':
+#### 'Payday loan':
   . Most correlated unigrams:
        . speedy
        . payday
   . Most correlated bigrams:
        . took payday
        . payday loan
-# 'Payday loan, title loan, or personal loan':
+#### 'Payday loan, title loan, or personal loan':
   . Most correlated unigrams:
        . enterprise
        . zone
   . Most correlated bigrams:
        . entire day
        . entire financial
-# 'Prepaid card':
+#### 'Prepaid card':
   . Most correlated unigrams:
        . prepaid
        . rushcard
   . Most correlated bigrams:
        . prepaid card
        . rush card
-# 'Student loan':
+#### 'Student loan':
   . Most correlated unigrams:
        . student
        . navient
   . Most correlated bigrams:
        . student loans
        . student loan
-# 'Vehicle loan or lease':
+#### 'Vehicle loan or lease':
   . Most correlated unigrams:
        . enterprise
        . zone
   . Most correlated bigrams:
        . entire day
        . entire financial
-# 'Virtual currency':
+#### 'Virtual currency':
   . Most correlated unigrams:
        . tool
        . trading
   . Most correlated bigrams:
        . requests assistance
        . email requests
+       
 ['Debt collection']
+
 ['Credit reporting']
+
 /Users/gwhyte2017/miniconda2/envs/datascience1/lib/python2.7/site-packages/sklearn/model_selection/_split.py:581: Warning: The least populated class in y has only 2 members, which is too few. The minimum number of groups for any class cannot be less than n_splits=5.
   % (min_groups, self.n_splits)), Warning)
 model_name
