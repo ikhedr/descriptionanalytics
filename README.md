@@ -1,5 +1,10 @@
 # callanalytics
 
+This readme shows the output from the code, this a good description
+of how to mine text data and extract entities and predict.
+
+This code is just samples of how to mine.
+
 Output from code 
 
   Date received           Product     Sub-product  \
